@@ -8,7 +8,7 @@ Sample output:
 > Package_for_RollupFix\~31bf3856ad364e35\~amd64\~\~7601.24180.1.8 
 > Package_for_RollupFix\~31bf3856ad364e35\~amd64\~\~7601.24208.1.11
 > Package_for_RollupFix\~31bf3856ad364e35\~amd64\~\~7601.24261.1.6 
-
+>
 > Standalone package(s) in broken state                 
 > \-------------------------------------                 
 > Package_for_KB4339093\~31bf3856ad364e35\~amd64\~\~11.2.1.0
