@@ -13,8 +13,8 @@
 # Permanent              0x80     128
 
 #Load the CBS hive file under HKLM with the name "CBS" or switch the comment below to run against the current system
-$regPATH = "HKLM:\CBS\Packages"
-#$regPATH = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages" 
+#$regPATH = "HKLM:\CBS\Packages"
+$regPATH = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages" 
  
 $brokenUpdates = Get-ChildItem -PATH $regPATH -ErrorAction SilentlyContinue | Where-Object { $_.Name -like "*Rollup*" } #matches any Cumulative Update or Monthly Rollup
 $brokenUpdates | Get-ItemProperty | Where-Object { $_.CurrentState -ne "80" -and $_.CurrentState -ne "112" -and $_.CurrentState -ne "7"} | Select-Object @{N=’Cumulative/rollup package(s) in broken state’; E={$_.PSChildName};} | Format-Table -Wrap -AutoSize
